@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="595" height="842" viewBox="0 0 595 842" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #ffffff; stroke: #222222; stroke-width: 1.6; rx: 8; }
+    .header { font-family: 'Helvetica', Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #111111; }
+    .body { font-family: 'Helvetica', Arial, sans-serif; font-size: 12px; fill: #111111; }
+    .arrow { stroke: #222222; stroke-width: 1.4; fill: none; marker-end: url(#arrowhead); }
+    .sub { font-size:11px; fill:#111111 }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#222222" />
+    </marker>
+  </defs>
+
+  <!-- Dataset -->
+  <g transform="translate(40,30)">
+    <rect class="box" x="0" y="0" width="515" height="60"/>
+    <text class="header" x="18" y="22">Dataset</text>
+    <text class="body" x="18" y="40">CDC Diabetes Health Indicators — 21 features, ~253,680 instances</text>
+  </g>
+
+  <!-- Arrow to Preprocessing -->
+  <path class="arrow" d="M297 90 L297 120" />
+
+  <!-- Data Preprocessing -->
+  <g transform="translate(40,120)">
+    <rect class="box" x="0" y="0" width="515" height="80"/>
+    <text class="header" x="18" y="22">Data Preprocessing</text>
+    <text class="body" x="18" y="40">Handle missing values • Encode categorical variables • Normalize numeric features</text>
+  </g>
+
+  <!-- Arrow to Model Setup -->
+  <path class="arrow" d="M297 200 L297 235" />
+
+  <!-- Model Setup (YDF and RF side by side, larger boxes) -->
+  <g transform="translate(40,235)">
+    <rect class="box" x="0" y="0" width="245" height="110"/>
+    <text class="header" x="14" y="22">Yggdrasil Decision Forest (YDF)</text>
+    <text class="sub" x="14" y="42">Algorithm: GBTL</text>
+    <text class="sub" x="14" y="58">Templates: better_defaultv1 • benchmark_rank1v1</text>
+    <text class="sub" x="14" y="74">Optimized for: accuracy &amp; efficiency</text>
+    <text class="sub" x="14" y="90">Framework: TensorFlow Decision Forests</text>
+  </g>
+
+  <g transform="translate(310,235)">
+    <rect class="box" x="0" y="0" width="245" height="110"/>
+    <text class="header" x="14" y="22">Scikit-learn Random Forest (RF)</text>
+    <text class="sub" x="14" y="42">default parameters: n_estimators=100, </text>
+    <text class="sub" x="14" y="58">max_depth=None</text>
+    <text class="sub" x="14" y="74">min_samples_leaf=1</text>
+  </g>
+
+  <!-- Center merging arrows from both models, aligned properly -->
+  <path class="arrow" d="M162.5 345 L162.5 370 L297 370" />
+  <path class="arrow" d="M432.5 345 L432.5 370 L297 370" />
+
+  <!-- Arrow down to Experimental Design -->
+  <path class="arrow" d="M297 370 L297 400" />
+
+  <!-- Experimental Design -->
+  <g transform="translate(40,400)">
+    <rect class="box" x="0" y="0" width="515" height="90"/>
+    <text class="header" x="18" y="24">Experimental Design</text>
+    <text class="body" x="18" y="44">5-Fold Cross-Validation (repeated 3x) • Hyperparameter tuning via grid search</text>
+    <text class="body" x="18" y="60">Train final models on full training set using selected hyperparameters</text>
+  </g>
+
+  <!-- Arrow down to Model Evaluation -->
+  <path class="arrow" d="M297 490 L297 530" />
+
+  <!-- Model Evaluation -->
+  <g transform="translate(40,540)">
+    <rect class="box" x="0" y="0" width="515" height="110"/>
+    <text class="header" x="18" y="24">Model Evaluation</text>
+    <text class="body" x="18" y="44">Predictive: Accuracy • Precision • Recall • F1-Score</text>
+    <text class="body" x="18" y="60">Computational: Training Time • Model Size</text>
+    <text class="body" x="18" y="76">Statistical: Independent t-tests on metric differences</text>
+  </g>
+
+  <!-- Arrow down to Results Interpretation -->
+  <path class="arrow" d="M297 650 L297 700" />
+
+  <!-- Results Interpretation -->
+  <g transform="translate(40,710)">
+    <rect class="box" x="0" y="0" width="515" height="90"/>
+    <text class="header" x="18" y="24">Results Interpretation</text>
+    <text class="body" x="18" y="44">Compare metrics and efficiency • Variable importance analysis • Conclusions</text>
+  </g>
+</svg>
