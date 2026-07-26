@@ -163,3 +163,4 @@ cython_debug/
 *.joblib
 *rskf.csv
 *equivalence.csv
+results/*
