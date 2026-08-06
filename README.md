@@ -6,8 +6,15 @@ mapped to comment numbers).
 
 ## 1. Install dependencies
 
+clone the repository and run the following to install dependencies
+
 ```bash
 pip install pandas numpy scikit-learn ydf scipy joblib
+```
+if using uv then run:
+
+```bash
+uv sync
 ```
 
 `ydf` requires Python 3.9+ and a 64-bit OS (Linux, macOS, or Windows via WSL).
