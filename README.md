@@ -37,7 +37,6 @@ as long as it's the full imbalanced file with all 253,680 rows and the
 ## 3. Run the script
 
 ```bash
-cd benchmark_rf_vs_ydf_script/
 python benchmark_rf_vs_ydf.py --data /path/to/diabetes_binary_health_indicators_BRFSS2015.csv --trials 10
 ```
 
