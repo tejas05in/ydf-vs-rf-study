@@ -20,10 +20,7 @@ uv sync
 `ydf` requires Python 3.9+ and a 64-bit OS (Linux, macOS, or Windows via WSL).
 If you hit a `TypeError` mentioning an unexpected keyword argument when the
 script calls `ydf.GradientBoostedTreesLearner(...)`, update to the latest
-version first: `pip install -U ydf`. This script deliberately avoids
-version-specific YDF parameters (see Section 6 below) so it should run on
-any reasonably recent release, but updating is the first thing to try if
-you see a YDF-related TypeError.
+version first: `pip install -U ydf`. 
 
 ## 2. Get the dataset
 
